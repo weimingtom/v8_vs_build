@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="test">
+      <UniqueIdentifier>{5763B17F-46DA-9ED7-179F-9C9F273B791C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="test\cctest">
+      <UniqueIdentifier>{5139F913-200E-7CD3-AFC7-BE6AC5481F29}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test\cctest\util.cc">
+      <Filter>test\cctest</Filter>
+    </ClCompile>
+    <None Include="node.gyp"/>
+  </ItemGroup>
+</Project>

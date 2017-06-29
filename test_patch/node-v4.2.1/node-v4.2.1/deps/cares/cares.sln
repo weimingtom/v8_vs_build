@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cares", "cares.vcxproj", "{74CF319D-6651-E4ED-35FD-B82D47DC2516}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74CF319D-6651-E4ED-35FD-B82D47DC2516}.Debug|Win32.ActiveCfg = Debug|Win32
+		{74CF319D-6651-E4ED-35FD-B82D47DC2516}.Debug|Win32.Build.0 = Debug|Win32
+		{74CF319D-6651-E4ED-35FD-B82D47DC2516}.Release|Win32.ActiveCfg = Release|Win32
+		{74CF319D-6651-E4ED-35FD-B82D47DC2516}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

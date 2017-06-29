@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{74CF319D-6651-E4ED-35FD-B82D47DC2516}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>cares</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props"/>
+  <ImportGroup Label="ExtensionSettings"/>
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\.\bin\;$(MSBuildProjectDirectory)\.\bin\</ExecutablePath>
+    <IntDir>$(Configuration)\obj\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)lib\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include;src;config\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4351;4355;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <OmitFramePointers>false</OmitFramePointers>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;BUILDING_V8_SHARED=1;BUILDING_UV_SHARED=1;CARES_STATICLIB;DEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;iphlpapi.lib</AdditionalDependencies>
+      <AllowIsolation>true</AllowIsolation>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>include;src;config\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;BUILDING_V8_SHARED=1;BUILDING_UV_SHARED=1;CARES_STATICLIB;DEBUG;_DEBUG;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>include;src;config\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4351;4355;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>Full</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;BUILDING_V8_SHARED=1;BUILDING_UV_SHARED=1;CARES_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/LTCG %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalDependencies>ws2_32.lib;iphlpapi.lib</AdditionalDependencies>
+      <AllowIsolation>true</AllowIsolation>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <MapExports>true</MapExports>
+      <OptimizeReferences>true</OptimizeReferences>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>include;src;config\win32;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;BUILDING_V8_SHARED=1;BUILDING_UV_SHARED=1;CARES_STATICLIB;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="common.gypi"/>
+    <None Include="cares.gyp"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\ares.h"/>
+    <ClInclude Include="include\ares_version.h"/>
+    <ClInclude Include="include\nameser.h"/>
+    <ClInclude Include="src\ares_data.h"/>
+    <ClInclude Include="src\ares_dns.h"/>
+    <ClInclude Include="src\ares_getenv.h"/>
+    <ClInclude Include="src\ares_getopt.h"/>
+    <ClInclude Include="src\ares_ipv6.h"/>
+    <ClInclude Include="src\ares_library_init.h"/>
+    <ClInclude Include="src\ares_llist.h"/>
+    <ClInclude Include="src\ares_nowarn.h"/>
+    <ClInclude Include="src\ares_platform.h"/>
+    <ClInclude Include="src\ares_private.h"/>
+    <ClInclude Include="src\ares_rules.h"/>
+    <ClInclude Include="src\ares_setup.h"/>
+    <ClInclude Include="src\ares_strcasecmp.h"/>
+    <ClInclude Include="src\ares_strdup.h"/>
+    <ClInclude Include="src\ares_writev.h"/>
+    <ClInclude Include="src\bitncmp.h"/>
+    <ClInclude Include="src\ares_inet_net_pton.h"/>
+    <ClInclude Include="src\setup_once.h"/>
+    <ClInclude Include="src\config-win32.h"/>
+    <ClInclude Include="src\ares_iphlpapi.h"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ares_cancel.c"/>
+    <ClCompile Include="src\ares__close_sockets.c"/>
+    <ClCompile Include="src\ares_create_query.c"/>
+    <ClCompile Include="src\ares_data.c"/>
+    <ClCompile Include="src\ares_destroy.c"/>
+    <ClCompile Include="src\ares_expand_name.c"/>
+    <ClCompile Include="src\ares_expand_string.c"/>
+    <ClCompile Include="src\ares_fds.c"/>
+    <ClCompile Include="src\ares_free_hostent.c"/>
+    <ClCompile Include="src\ares_free_string.c"/>
+    <ClCompile Include="src\ares_gethostbyaddr.c"/>
+    <ClCompile Include="src\ares_gethostbyname.c"/>
+    <ClCompile Include="src\ares__get_hostent.c"/>
+    <ClCompile Include="src\ares_getnameinfo.c"/>
+    <ClCompile Include="src\ares_getopt.c"/>
+    <ClCompile Include="src\ares_getsock.c"/>
+    <ClCompile Include="src\ares_init.c"/>
+    <ClCompile Include="src\ares_library_init.c"/>
+    <ClCompile Include="src\ares_llist.c"/>
+    <ClCompile Include="src\ares_mkquery.c"/>
+    <ClCompile Include="src\ares_nowarn.c"/>
+    <ClCompile Include="src\ares_options.c"/>
+    <ClCompile Include="src\ares_parse_aaaa_reply.c"/>
+    <ClCompile Include="src\ares_parse_a_reply.c"/>
+    <ClCompile Include="src\ares_parse_mx_reply.c"/>
+    <ClCompile Include="src\ares_parse_naptr_reply.c"/>
+    <ClCompile Include="src\ares_parse_ns_reply.c"/>
+    <ClCompile Include="src\ares_parse_ptr_reply.c"/>
+    <ClCompile Include="src\ares_parse_soa_reply.c"/>
+    <ClCompile Include="src\ares_parse_srv_reply.c"/>
+    <ClCompile Include="src\ares_parse_txt_reply.c"/>
+    <ClCompile Include="src\ares_process.c"/>
+    <ClCompile Include="src\ares_query.c"/>
+    <ClCompile Include="src\ares__read_line.c"/>
+    <ClCompile Include="src\ares_search.c"/>
+    <ClCompile Include="src\ares_send.c"/>
+    <ClCompile Include="src\ares_strcasecmp.c"/>
+    <ClCompile Include="src\ares_strdup.c"/>
+    <ClCompile Include="src\ares_strerror.c"/>
+    <ClCompile Include="src\ares_timeout.c"/>
+    <ClCompile Include="src\ares__timeval.c"/>
+    <ClCompile Include="src\ares_version.c"/>
+    <ClCompile Include="src\ares_writev.c"/>
+    <ClCompile Include="src\bitncmp.c"/>
+    <ClCompile Include="src\inet_net_pton.c"/>
+    <ClCompile Include="src\inet_ntop.c"/>
+    <ClCompile Include="src\windows_port.c"/>
+    <ClCompile Include="src\ares_getenv.c"/>
+    <ClCompile Include="src\ares_platform.c"/>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets"/>
+  <ImportGroup Label="ExtensionTargets"/>
+</Project>

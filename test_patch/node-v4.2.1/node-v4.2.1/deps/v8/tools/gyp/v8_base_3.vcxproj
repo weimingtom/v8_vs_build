@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1FF23471-DAC0-6C75-D1C8-643583A77142}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>v8_base_3</RootNamespace>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props"/>
+  <PropertyGroup Label="Configuration">
+    <CharacterSet>Unicode</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Label="Locals">
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props"/>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.props"/>
+  <ImportGroup Label="ExtensionSettings"/>
+  <ImportGroup Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props"/>
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros"/>
+  <PropertyGroup>
+    <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\.\bin\;$(MSBuildProjectDirectory)\.\bin\</ExecutablePath>
+    <OutDir>..\..\..\..\build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)obj\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <TargetName>$(ProjectName)</TargetName>
+    <TargetPath>$(OutDir)lib\$(ProjectName)$(TargetExt)</TargetPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/arch:SSE2 %(AdditionalOptions)</AdditionalOptions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4351;4355;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <OmitFramePointers>false</OmitFramePointers>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;BUILDING_V8_SHARED=1;BUILDING_UV_SHARED=1;V8_TARGET_ARCH_IA32;ENABLE_DISASSEMBLER;V8_IMMINENT_DEPRECATION_WARNINGS;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_SHARED;V8_ENABLE_CHECKS;OBJECT_PRINT;VERIFY_HEAP;DEBUG;TRACE_MAPS;ENABLE_HANDLE_ZAPPING;ENABLE_SLOW_DCHECKS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AllowIsolation>true</AllowIsolation>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapExports>true</MapExports>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;BUILDING_V8_SHARED=1;BUILDING_UV_SHARED=1;V8_TARGET_ARCH_IA32;ENABLE_DISASSEMBLER;V8_IMMINENT_DEPRECATION_WARNINGS;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_SHARED;V8_ENABLE_CHECKS;OBJECT_PRINT;VERIFY_HEAP;DEBUG;TRACE_MAPS;ENABLE_HANDLE_ZAPPING;ENABLE_SLOW_DCHECKS;_DEBUG;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/arch:SSE2 /MP %(AdditionalOptions)</AdditionalOptions>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4351;4355;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>false</ExceptionHandling>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <OmitFramePointers>true</OmitFramePointers>
+      <Optimization>MaxSpeed</Optimization>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;BUILDING_V8_SHARED=1;BUILDING_UV_SHARED=1;V8_TARGET_ARCH_IA32;ENABLE_DISASSEMBLER;V8_IMMINENT_DEPRECATION_WARNINGS;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <StringPooling>true</StringPooling>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <WholeProgramOptimization>true</WholeProgramOptimization>
+    </ClCompile>
+    <Lib>
+      <AdditionalOptions>/LTCG %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)lib\$(ProjectName)$(TargetExt)</OutputFile>
+    </Lib>
+    <Link>
+      <AdditionalDependencies></AdditionalDependencies>
+      <AllowIsolation>true</AllowIsolation>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateMapFile>true</GenerateMapFile>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <MapExports>true</MapExports>
+      <OptimizeReferences>true</OptimizeReferences>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;BUILDING_V8_SHARED=1;BUILDING_UV_SHARED=1;V8_TARGET_ARCH_IA32;ENABLE_DISASSEMBLER;V8_IMMINENT_DEPRECATION_WARNINGS;ICU_UTIL_DATA_IMPL=ICU_UTIL_DATA_SHARED;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="v8.gyp"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\include\v8-testing.h"/>
+    <ClInclude Include="..\..\include\v8config.h"/>
+    <ClInclude Include="..\..\src\allocation.h"/>
+    <ClInclude Include="..\..\src\allocation-tracker.h"/>
+    <ClInclude Include="..\..\src\api-natives.h"/>
+    <ClInclude Include="..\..\src\assembler.h"/>
+    <ClInclude Include="..\..\src\ast-value-factory.h"/>
+    <ClInclude Include="..\..\src\ast-numbering.h"/>
+    <ClInclude Include="..\..\src\background-parsing-task.h"/>
+    <ClInclude Include="..\..\src\basic-block-profiler.h"/>
+    <ClInclude Include="..\..\src\bignum.h"/>
+    <ClInclude Include="..\..\src\bootstrapper.h"/>
+    <ClInclude Include="..\..\src\char-predicates.h"/>
+    <ClInclude Include="..\..\src\circular-queue.h"/>
+    <ClInclude Include="..\..\src\code-stubs.h"/>
+    <ClInclude Include="..\..\src\codegen.h"/>
+    <ClInclude Include="..\..\src\compilation-dependencies.h"/>
+    <ClInclude Include="..\..\src\compiler\access-builder.h"/>
+    <ClInclude Include="..\..\src\compiler\ast-graph-builder.h"/>
+    <ClInclude Include="..\..\src\compiler\basic-block-instrumentor.h"/>
+    <ClInclude Include="..\..\src\compiler\coalesced-live-ranges.h"/>
+    <ClInclude Include="..\..\src\compiler\graph-reducer.h"/>
+    <ClInclude Include="..\..\src\compiler\graph-trimmer.h"/>
+    <ClInclude Include="..\..\src\compiler\graph.h"/>
+    <ClInclude Include="..\..\src\compiler\instruction-selector-impl.h"/>
+    <ClInclude Include="..\..\src\compiler\instruction.h"/>
+    <ClInclude Include="..\..\src\compiler\js-context-specialization.h"/>
+    <ClInclude Include="..\..\src\compiler\js-generic-lowering.h"/>
+    <ClInclude Include="..\..\src\compiler\js-inlining.h"/>
+    <ClInclude Include="..\..\src\compiler\js-operator.h"/>
+    <ClInclude Include="..\..\src\compiler\js-typed-lowering.h"/>
+    <ClInclude Include="..\..\src\compiler\node-cache.h"/>
+    <ClInclude Include="..\..\src\compiler\node-matchers.h"/>
+    <ClInclude Include="..\..\src\compiler\node.h"/>
+    <ClInclude Include="..\..\src\compiler\operator-properties.h"/>
+    <ClInclude Include="..\..\src\compiler\osr.h"/>
+    <ClInclude Include="..\..\src\compiler\pipeline-statistics.h"/>
+    <ClInclude Include="..\..\src\compiler\register-allocator.h"/>
+    <ClInclude Include="..\..\src\compiler\register-configuration.h"/>
+    <ClInclude Include="..\..\src\conversions-inl.h"/>
+    <ClInclude Include="..\..\src\counters.h"/>
+    <ClInclude Include="..\..\src\dateparser.h"/>
+    <ClInclude Include="..\..\src\deoptimizer.h"/>
+    <ClInclude Include="..\..\src\dtoa.h"/>
+    <ClInclude Include="..\..\src\expression-classifier.h"/>
+    <ClInclude Include="..\..\src\extensions\free-buffer-extension.h"/>
+    <ClInclude Include="..\..\src\extensions\statistics-extension.h"/>
+    <ClInclude Include="..\..\src\factory.h"/>
+    <ClInclude Include="..\..\src\field-index-inl.h"/>
+    <ClInclude Include="..\..\src\frames.h"/>
+    <ClInclude Include="..\..\src\func-name-inferrer.h"/>
+    <ClInclude Include="..\..\src\global-handles.h"/>
+    <ClInclude Include="..\..\src\handles.h"/>
+    <ClInclude Include="..\..\src\heap-snapshot-generator-inl.h"/>
+    <ClInclude Include="..\..\src\heap\memory-reducer.h"/>
+    <ClInclude Include="..\..\src\heap\gc-tracer.h"/>
+    <ClInclude Include="..\..\src\heap\incremental-marking.h"/>
+    <ClInclude Include="..\..\src\heap\objects-visiting-inl.h"/>
+    <ClInclude Include="..\..\src\heap\store-buffer.h"/>
+    <ClInclude Include="..\..\src\hydrogen-instructions.h"/>
+    <ClInclude Include="..\..\src\hydrogen-gvn.h"/>
+    <ClInclude Include="..\..\src\hydrogen-infer-types.h"/>
+    <ClInclude Include="..\..\src\hydrogen-mark-deoptimize.h"/>
+    <ClInclude Include="..\..\src\hydrogen-osr.h"/>
+    <ClInclude Include="..\..\src\hydrogen-redundant-phi.h"/>
+    <ClInclude Include="..\..\src\hydrogen-representation-changes.h"/>
+    <ClInclude Include="..\..\src\hydrogen-store-elimination.h"/>
+    <ClInclude Include="..\..\src\hydrogen-uint32-analysis.h"/>
+    <ClInclude Include="..\..\src\ic\access-compiler.h"/>
+    <ClInclude Include="..\..\src\ic\handler-compiler.h"/>
+    <ClInclude Include="..\..\src\jsregexp-inl.h"/>
+    <ClInclude Include="..\..\src\lithium-allocator-inl.h"/>
+    <ClInclude Include="..\..\src\lithium-codegen.h"/>
+    <ClInclude Include="..\..\src\log-utils.h"/>
+    <ClInclude Include="..\..\src\messages.h"/>
+    <ClInclude Include="..\..\src\objects.h"/>
+    <ClInclude Include="..\..\src\ostreams.h"/>
+    <ClInclude Include="..\..\src\preparse-data.h"/>
+    <ClInclude Include="..\..\src\prettyprinter.h"/>
+    <ClInclude Include="..\..\src\property-details.h"/>
+    <ClInclude Include="..\..\src\regexp-macro-assembler-irregexp-inl.h"/>
+    <ClInclude Include="..\..\src\regexp-macro-assembler-tracer.h"/>
+    <ClInclude Include="..\..\src\regexp-stack.h"/>
+    <ClInclude Include="..\..\src\runtime-profiler.h"/>
+    <ClInclude Include="..\..\src\runtime\runtime-utils.h"/>
+    <ClInclude Include="..\..\src\safepoint-table.h"/>
+    <ClInclude Include="..\..\src\scanner-character-streams.h"/>
+    <ClInclude Include="..\..\src\scopeinfo.h"/>
+    <ClInclude Include="..\..\src\simulator.h"/>
+    <ClInclude Include="..\..\src\transitions-inl.h"/>
+    <ClInclude Include="..\..\src\types-inl.h"/>
+    <ClInclude Include="..\..\src\typing.h"/>
+    <ClInclude Include="..\..\src\unique.h"/>
+    <ClInclude Include="..\..\src\v8.h"/>
+    <ClInclude Include="..\..\src\version.h"/>
+    <ClInclude Include="..\..\src\zone.h"/>
+    <ClInclude Include="..\..\src\third_party\fdlibm\fdlibm.h"/>
+    <ClInclude Include="..\..\src\ia32\codegen-ia32.h"/>
+    <ClInclude Include="..\..\src\ia32\lithium-gap-resolver-ia32.h"/>
+    <ClInclude Include="..\..\src\ia32\macro-assembler-ia32.h"/>
+    <ClInclude Include="..\..\src\compiler\ia32\instruction-codes-ia32.h"/>
+    <ClInclude Include="..\..\src\i18n.h">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\cached-powers.cc"/>
+    <ClCompile Include="..\..\src\compiler\common-node-cache.cc"/>
+    <ClCompile Include="..\..\src\compiler\common-operator.cc"/>
+    <ClCompile Include="..\..\src\compiler\control-equivalence.cc"/>
+    <ClCompile Include="..\..\src\compiler\dead-code-elimination.cc"/>
+    <ClCompile Include="..\..\src\compiler\frame-elider.cc"/>
+    <ClCompile Include="..\..\src\compiler\gap-resolver.cc"/>
+    <ClCompile Include="..\..\src\compiler\linkage.cc"/>
+    <ClCompile Include="..\..\src\compiler\load-elimination.cc"/>
+    <ClCompile Include="..\..\src\compiler\loop-peeling.cc"/>
+    <ClCompile Include="..\..\src\compiler\machine-operator.cc"/>
+    <ClCompile Include="..\..\src\compiler\move-optimizer.cc"/>
+    <ClCompile Include="..\..\src\compiler\scheduler.cc"/>
+    <ClCompile Include="..\..\src\compiler\simplified-lowering.cc"/>
+    <ClCompile Include="..\..\src\compiler\simplified-operator.cc"/>
+    <ClCompile Include="..\..\src\compiler\state-values-utils.cc"/>
+    <ClCompile Include="..\..\src\compiler\typer.cc"/>
+    <ClCompile Include="..\..\src\compiler\verifier.cc"/>
+    <ClCompile Include="..\..\src\compiler.cc"/>
+    <ClCompile Include="..\..\src\date.cc"/>
+    <ClCompile Include="..\..\src\diy-fp.cc"/>
+    <ClCompile Include="..\..\src\elements.cc"/>
+    <ClCompile Include="..\..\src\flags.cc"/>
+    <ClCompile Include="..\..\src\heap\identity-map.cc"/>
+    <ClCompile Include="..\..\src\heap\spaces.cc"/>
+    <ClCompile Include="..\..\src\hydrogen-bch.cc"/>
+    <ClCompile Include="..\..\src\hydrogen-check-elimination.cc"/>
+    <ClCompile Include="..\..\src\hydrogen-dehoist.cc"/>
+    <ClCompile Include="..\..\src\hydrogen-escape-analysis.cc"/>
+    <ClCompile Include="..\..\src\ic\ic.cc"/>
+    <ClCompile Include="..\..\src\interface-descriptors.cc"/>
+    <ClCompile Include="..\..\src\isolate.cc"/>
+    <ClCompile Include="..\..\src\layout-descriptor.cc"/>
+    <ClCompile Include="..\..\src\liveedit.cc"/>
+    <ClCompile Include="..\..\src\lookup.cc"/>
+    <ClCompile Include="..\..\src\objects-debug.cc"/>
+    <ClCompile Include="..\..\src\pending-compilation-error-handler.cc"/>
+    <ClCompile Include="..\..\src\runtime\runtime-collections.cc"/>
+    <ClCompile Include="..\..\src\runtime\runtime-forin.cc"/>
+    <ClCompile Include="..\..\src\runtime\runtime-internal.cc"/>
+    <ClCompile Include="..\..\src\runtime\runtime-maths.cc"/>
+    <ClCompile Include="..\..\src\runtime\runtime-proxy.cc"/>
+    <ClCompile Include="..\..\src\runtime\runtime-symbol.cc"/>
+    <ClCompile Include="..\..\src\snapshot\serialize.cc"/>
+    <ClCompile Include="..\..\src\snapshot\snapshot-source-sink.cc"/>
+    <ClCompile Include="..\..\src\startup-data-util.cc"/>
+    <ClCompile Include="..\..\src\string-search.cc"/>
+    <ClCompile Include="..\..\src\strings-storage.cc"/>
+    <ClCompile Include="..\..\src\ic\stub-cache.cc"/>
+    <ClCompile Include="..\..\src\type-feedback-vector.cc"/>
+    <ClCompile Include="..\..\src\unicode.cc"/>
+    <ClCompile Include="..\..\src\variables.cc"/>
+    <ClCompile Include="..\..\src\ia32\builtins-ia32.cc"/>
+    <ClCompile Include="..\..\src\ia32\disasm-ia32.cc"/>
+    <ClCompile Include="..\..\src\ia32\interface-descriptors-ia32.cc"/>
+    <ClCompile Include="..\..\src\ic\ia32\handler-compiler-ia32.cc"/>
+    <ClCompile Include="..\..\src\i18n.cc">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
+  <Import Project="$(VCTargetsPath)\BuildCustomizations\masm.targets"/>
+  <ImportGroup Label="ExtensionTargets"/>
+</Project>
