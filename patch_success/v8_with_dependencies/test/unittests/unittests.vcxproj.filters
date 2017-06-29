@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="base">
+      <UniqueIdentifier>{DBBAC0A6-BB0A-CA51-45CC-DA4574B671E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{DBBAC0A6-BB0A-CA51-45CC-DA4574B671E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{DBBAC0A6-BB0A-CA51-45CC-DA4574B671E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{DBBAC0A6-BB0A-CA51-45CC-DA4574B671E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{DBBAC0A6-BB0A-CA51-45CC-DA4574B671E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{DBBAC0A6-BB0A-CA51-45CC-DA4574B671E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\platform">
+      <UniqueIdentifier>{F040E8BA-F77A-8B19-E764-5FC5D53C4EF0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{DBBAC0A6-BB0A-CA51-45CC-DA4574B671E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\platform">
+      <UniqueIdentifier>{F040E8BA-F77A-8B19-E764-5FC5D53C4EF0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{DBBAC0A6-BB0A-CA51-45CC-DA4574B671E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\platform">
+      <UniqueIdentifier>{F040E8BA-F77A-8B19-E764-5FC5D53C4EF0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{DBBAC0A6-BB0A-CA51-45CC-DA4574B671E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\platform">
+      <UniqueIdentifier>{F040E8BA-F77A-8B19-E764-5FC5D53C4EF0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{DBBAC0A6-BB0A-CA51-45CC-DA4574B671E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\platform">
+      <UniqueIdentifier>{F040E8BA-F77A-8B19-E764-5FC5D53C4EF0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{DBBAC0A6-BB0A-CA51-45CC-DA4574B671E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base">
+      <UniqueIdentifier>{DBBAC0A6-BB0A-CA51-45CC-DA4574B671E6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="base\utils">
+      <UniqueIdentifier>{742E9A0E-D1B0-643D-E893-71064FFA2C51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libplatform">
+      <UniqueIdentifier>{9B7F73B5-A7A6-5D6A-BB07-622B00510DF3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libplatform">
+      <UniqueIdentifier>{9B7F73B5-A7A6-5D6A-BB07-622B00510DF3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="libplatform">
+      <UniqueIdentifier>{9B7F73B5-A7A6-5D6A-BB07-622B00510DF3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="heap">
+      <UniqueIdentifier>{7CED2756-64ED-26C7-9576-5881BF99323C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler">
+      <UniqueIdentifier>{041FFD28-E4BD-ABC0-5AF7-A6D1560FAC0E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="compiler\ia32">
+      <UniqueIdentifier>{884EDFAC-39DF-1338-3795-84EDC7FF91FF}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="base\bits-unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\cpu-unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\division-by-constant-unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\flags-unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\functional-unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\platform\condition-variable-unittest.cc">
+      <Filter>base\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="base\platform\mutex-unittest.cc">
+      <Filter>base\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="base\platform\platform-unittest.cc">
+      <Filter>base\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="base\platform\semaphore-unittest.cc">
+      <Filter>base\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="base\platform\time-unittest.cc">
+      <Filter>base\platform</Filter>
+    </ClCompile>
+    <ClCompile Include="base\sys-info-unittest.cc">
+      <Filter>base</Filter>
+    </ClCompile>
+    <ClCompile Include="base\utils\random-number-generator-unittest.cc">
+      <Filter>base\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="char-predicates-unittest.cc"/>
+    <ClCompile Include="compiler\change-lowering-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler\common-operator-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClInclude Include="compiler\compiler-test-utils.h">
+      <Filter>compiler</Filter>
+    </ClInclude>
+    <ClCompile Include="compiler\diamond-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler\graph-reducer-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler\graph-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClInclude Include="compiler\graph-unittest.h">
+      <Filter>compiler</Filter>
+    </ClInclude>
+    <ClCompile Include="compiler\instruction-selector-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClInclude Include="compiler\instruction-selector-unittest.h">
+      <Filter>compiler</Filter>
+    </ClInclude>
+    <ClCompile Include="compiler\js-builtin-reducer-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler\js-operator-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler\js-typed-lowering-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler\machine-operator-reducer-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler\node-matchers-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler\node-test-utils.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClInclude Include="compiler\node-test-utils.h">
+      <Filter>compiler</Filter>
+    </ClInclude>
+    <ClCompile Include="compiler\register-allocator-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler\select-lowering-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler\simplified-operator-reducer-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler\simplified-operator-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler\value-numbering-reducer-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="compiler\zone-pool-unittest.cc">
+      <Filter>compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="libplatform\default-platform-unittest.cc">
+      <Filter>libplatform</Filter>
+    </ClCompile>
+    <ClCompile Include="libplatform\task-queue-unittest.cc">
+      <Filter>libplatform</Filter>
+    </ClCompile>
+    <ClCompile Include="libplatform\worker-thread-unittest.cc">
+      <Filter>libplatform</Filter>
+    </ClCompile>
+    <ClCompile Include="heap\gc-idle-time-handler-unittest.cc">
+      <Filter>heap</Filter>
+    </ClCompile>
+    <ClCompile Include="run-all-unittests.cc"/>
+    <ClInclude Include="test-utils.h"/>
+    <ClCompile Include="test-utils.cc"/>
+    <ClCompile Include="compiler\ia32\instruction-selector-ia32-unittest.cc">
+      <Filter>compiler\ia32</Filter>
+    </ClCompile>
+    <None Include="unittests.gyp"/>
+  </ItemGroup>
+</Project>
